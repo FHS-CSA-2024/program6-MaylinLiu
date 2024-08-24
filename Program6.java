@@ -4,29 +4,29 @@ import java.util.Scanner;
 
 public class Program6 {
     public static void main(String[] args) {
-        // Constant definition for pi
+        // Constant for Pi
         final double PI = 3.14159;
 
-        // Create a Scanner object to read input
-        Scanner input = new Scanner(System.in);
+        // Create a Scanner object to get user input
+        Scanner scanner = new Scanner(System.in);
 
         // Prompt the user to enter the radius
-        System.out.print("Enter the radius: ");
-        double radius = input.nextDouble();
+        System.out.println("Enter the radius: ");
+        double radius = scanner.nextDouble();
 
-        // Calculate diameter, area, and circumference
+        // Calculate the diameter, area, and circumference
         double diameter = 2 * radius;
-        double area = PI * Math.pow(radius, 2);
+        double area = PI * radius * radius;
         double circumference = 2 * PI * radius;
 
-        // Format the output to three decimal places
-        System.out.print("The Radius of the circle = %.3f%n", radius);
-        System.out.print("The Diameter of the circle = %.3f%n", diameter);
-        System.out.print("The Area of the circle = %.3f%n", area);
-        System.out.print("The Circumference of the circle = %.3f%n", circumference);
+        // Print the results (without formatting to three decimal places)
+        System.out.println("The Radius of the circle = " + radius);
+        System.out.println("The Diameter of the circle = " + diameter);
+        System.out.println("The Area of the circle = " + area);
+        System.out.println("The Circumference of the circle = " + circumference);
 
         // Close the scanner
-        input.close();
+        scanner.close();
     }
 }
 
